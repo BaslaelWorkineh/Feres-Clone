@@ -10,13 +10,16 @@
     "react-dom": "18.2.0",
     "react-native": "0.73.2",
     "react-native-gesture-handler": "^2.15.0",
+    "react-native-maps": "^1.10.3",
     "react-native-reanimated": "~3.6.0",
     "react-native-safe-area-context": "^4.9.0",
     "react-native-screens": "^3.29.0",
-    "react-native-web": "~0.19.6"
+    "react-native-web": "~0.19.6",
+    "tailwind-react-native-classnames": "^1.5.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.19.3"
+    "@babel/core": "^7.19.3",
+    "tailwindcss": "^3.4.1"
   },
   "name": "feres-clone",
   "version": "1.0.0",

@@ -29,7 +29,7 @@ export default function APP() {
         drawerContent={
           (props) => {
             return (
-              <SafeAreaView>
+              <SafeAreaView  style={{ flex: 1, backgroundColor: 'white' }}>
                 <View
                   style={{
                     height: 200,
@@ -38,7 +38,7 @@ export default function APP() {
                     alignItems: 'center',
                     borderBottomColor: "#f4f4f4",
                     borderBottomWidth: 1,
-                    backgroundColor: 'blue'
+                    backgroundColor: 'white',
                   }}
                 >
                   <Image
@@ -48,7 +48,7 @@ export default function APP() {
                     width:100,
                     borderRadius:65
                   }}/>
-                  <Text style={{color:'white', fontSize:20, marginVertical:6}} >Baslael Workineh</Text>
+                  <Text style={{color:'black', fontSize:20, marginVertical:6}} >Baslael Workineh</Text>
 
                 </View>
                 <DrawerItemList {...props} />
@@ -59,18 +59,20 @@ export default function APP() {
         screenOptions={{
           drawerStyle: {
             backgroundColor: '#fff',
-            width: 250
+            width: 250,
           },
           headerStyle: {
             backgroundColor: '#f4511e'
           },
           headerTintColor: "#fff",
           headerTitleStyle: {
-            fontWeight: "bold"
+            fontWeight: "bold",
+            
+            
           },
           drawerActiveTintColor: "blue",
           drawerLabelStyle: {
-            color: "#111"
+            color: "#111",
           }
         }}
       >
@@ -81,29 +83,41 @@ export default function APP() {
             title: "Home",
             drawerIcon: () => (
               <SimpleLineIcons name="home" size={20} color="#808080" />
-            )
+            ),
+            drawerLabelStyle:{
+              fontSize:17,
+              color:'black'
+            }
           }}
           component={Home}
         />
         <Drawer.Screen
           name="PreOrders"
           options={{
-            drawerLabel: "PreOrders",
+            drawerLabel: "Pre-Orders",
             title: "PreOrders",
             drawerIcon: () => (
-              <SimpleLineIcons name="" size={20} color="#808080" />
-            )
+              <SimpleLineIcons name="user" size={20} color="#808080" />
+            ),
+            drawerLabelStyle:{
+              fontSize:17,
+              color:'black'
+            }
           }}
           component={PreOrders}
         />
         <Drawer.Screen
           name="FeresMiles"
           options={{
-            drawerLabel: "FeresMiles",
+            drawerLabel: "Feres Miles",
             title: "FeresMiles",
             drawerIcon: () => (
-              <SimpleLineIcons name="" size={20} color="#808080" />
-            )
+              <SimpleLineIcons name="user" size={20} color="#808080" />
+            ),
+            drawerLabelStyle:{
+              fontSize:17,
+              color:'black'
+            }
           }}
           component={FeresMiles}
         />
@@ -113,8 +127,12 @@ export default function APP() {
             drawerLabel: "History",
             title: "History",
             drawerIcon: () => (
-              <SimpleLineIcons name="" size={20} color="#808080" />
-            )
+              <SimpleLineIcons name="user" size={20} color="#808080" />
+            ),
+            drawerLabelStyle:{
+              fontSize:17,
+              color:'black'
+            }
           }}
           component={History}
         />
@@ -124,8 +142,12 @@ export default function APP() {
             drawerLabel: "Referral",
             title: "Referral",
             drawerIcon: () => (
-              <SimpleLineIcons name="time" size={20} color="#808080" />
-            )
+              <SimpleLineIcons name="user" size={20} color="#808080" />
+            ),
+            drawerLabelStyle:{
+              fontSize:17,
+              color:'black'
+            }
           }}
           component={Referral}
         />
@@ -136,18 +158,30 @@ export default function APP() {
             title: "Notification",
             drawerIcon: () => (
               <SimpleLineIcons name="bell" size={20} color="#808080" />
-            )
+            ),
+            drawerLabelStyle:{
+              fontSize:17,
+              color:'black'
+            }
           }}
           component={Notification}
         />
         <Drawer.Screen
           name="EmergencyContacts"
           options={{
-            drawerLabel: "EmergencyContacts",
+            drawerLabel: ({ focused, color }) => (
+              <Text style={{ fontSize: 17, color: 'black' }}>
+                {focused ? "Emergency" : "Emergency"} {"\n"} {focused ? "Contacts" : "Contacts"}
+              </Text>
+            ),
             title: "EmergencyContacts",
             drawerIcon: () => (
-              <SimpleLineIcons name="" size={20} color="#808080" />
-            )
+              <SimpleLineIcons name="user" size={20} color="#808080" />
+            ),
+            drawerLabelStyle:{
+              fontSize:17,
+              color:'black'
+            }
           }}
           component={EmergencyContacts}
         />
@@ -157,8 +191,12 @@ export default function APP() {
             drawerLabel: "ContactUs",
             title: "ContactUs",
             drawerIcon: () => (
-              <SimpleLineIcons name="phone" size={20} color="#808080" />
-            )
+              <SimpleLineIcons name="user" size={20} color="#808080" />
+            ),
+            drawerLabelStyle:{
+              fontSize:17,
+              color:'black'
+            }
           }}
           component={ContactUs}
         />
