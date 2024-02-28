@@ -57,12 +57,13 @@ export default function APP() {
           }
         }
         screenOptions={{
+          headerShown:true,
           drawerStyle: {
             backgroundColor: '#fff',
             width: 250,
           },
           headerStyle: {
-            backgroundColor: '#f4511e'
+            backgroundColor: 'lightgreen'
           },
           headerTintColor: "#fff",
           headerTitleStyle: {
@@ -73,10 +74,12 @@ export default function APP() {
           drawerActiveTintColor: "blue",
           drawerLabelStyle: {
             color: "#111",
-          }
+          },
+          
         }}
       >
         <Drawer.Screen
+        
           name="Home"
           options={{
             drawerLabel: "Home",
@@ -200,10 +203,6 @@ export default function APP() {
           }}
           component={ContactUs}
         />
-        
-        
-        
-        
 
       </Drawer.Navigator>
     </NavigationContainer>
