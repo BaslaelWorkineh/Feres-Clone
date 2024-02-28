@@ -24,7 +24,7 @@ const Drawer = createDrawerNavigator();
 export default function APP() {
 
   return (
-    <NavigationContainer>
+    <NavigationContainer style = {{flex:1, alighItems: "center", justifyContent: "center"}}>
       <Drawer.Navigator 
         screenOptions={{
           drawerStyle: {
@@ -109,6 +109,7 @@ export default function APP() {
             )
           }}
           component={Notification}
+
         />
         <Drawer.Screen
           name="PreOrders"
