@@ -18,6 +18,7 @@ import Home from "./screens/Home";
 import Notification from "./screens/Notification";
 import PreOrders from "./screens/PreOrders";
 import Referral from "./screens/Referral";
+import Services from "./screens/Services";
 const Drawer = createDrawerNavigator();
 
 export default function APP() {
@@ -28,7 +29,7 @@ export default function APP() {
         drawerContent={
           (props) => {
             return (
-              <SafeAreaView  style={{ flex: 1, backgroundColor: 'white' }}>
+              <SafeAreaView style={{ flex: 1, backgroundColor: 'white' }}>
                 <View
                   style={{
                     height: 200,
@@ -41,13 +42,13 @@ export default function APP() {
                   }}
                 >
                   <Image
-                  source={User}
-                  style={{
-                    height:100,
-                    width:100,
-                    borderRadius:65
-                  }}/>
-                  <Text style={{color:'black', fontSize:20, marginVertical:6}} >Baslael Workineh</Text>
+                    source={User}
+                    style={{
+                      height: 100,
+                      width: 100,
+                      borderRadius: 65
+                    }} />
+                  <Text style={{ color: 'black', fontSize: 20, marginVertical: 6 }} >Baslael Workineh</Text>
 
                 </View>
                 <DrawerItemList {...props} />
@@ -56,7 +57,7 @@ export default function APP() {
           }
         }
         screenOptions={{
-          headerShown:false,
+          headerShown: false,
           drawerStyle: {
             backgroundColor: '#fff',
             width: 250,
@@ -67,19 +68,19 @@ export default function APP() {
           headerTintColor: "#fff",
           headerTitleStyle: {
             fontWeight: "bold",
-            
-            
+
+
           },
           drawerActiveTintColor: "blue",
           drawerLabelStyle: {
             color: "#111",
           },
-          
+
         }}
       >
-        
+
         <Drawer.Screen
-        
+
           name="Home"
           options={{
             drawerLabel: "Home",
@@ -87,9 +88,9 @@ export default function APP() {
             drawerIcon: () => (
               <SimpleLineIcons name="home" size={20} color="#808080" />
             ),
-            drawerLabelStyle:{
-              fontSize:17,
-              color:'black'
+            drawerLabelStyle: {
+              fontSize: 17,
+              color: 'black'
             }
           }}
           component={Home}
@@ -102,9 +103,9 @@ export default function APP() {
             drawerIcon: () => (
               <SimpleLineIcons name="user" size={20} color="#808080" />
             ),
-            drawerLabelStyle:{
-              fontSize:17,
-              color:'black'
+            drawerLabelStyle: {
+              fontSize: 17,
+              color: 'black'
             }
           }}
           component={PreOrders}
@@ -117,9 +118,9 @@ export default function APP() {
             drawerIcon: () => (
               <SimpleLineIcons name="user" size={20} color="#808080" />
             ),
-            drawerLabelStyle:{
-              fontSize:17,
-              color:'black'
+            drawerLabelStyle: {
+              fontSize: 17,
+              color: 'black'
             }
           }}
           component={FeresMiles}
@@ -132,9 +133,9 @@ export default function APP() {
             drawerIcon: () => (
               <SimpleLineIcons name="user" size={20} color="#808080" />
             ),
-            drawerLabelStyle:{
-              fontSize:17,
-              color:'black'
+            drawerLabelStyle: {
+              fontSize: 17,
+              color: 'black'
             }
           }}
           component={History}
@@ -147,9 +148,9 @@ export default function APP() {
             drawerIcon: () => (
               <SimpleLineIcons name="user" size={20} color="#808080" />
             ),
-            drawerLabelStyle:{
-              fontSize:17,
-              color:'black'
+            drawerLabelStyle: {
+              fontSize: 17,
+              color: 'black'
             }
           }}
           component={Referral}
@@ -162,9 +163,9 @@ export default function APP() {
             drawerIcon: () => (
               <SimpleLineIcons name="bell" size={20} color="#808080" />
             ),
-            drawerLabelStyle:{
-              fontSize:17,
-              color:'black'
+            drawerLabelStyle: {
+              fontSize: 17,
+              color: 'black'
             }
           }}
           component={Notification}
@@ -181,9 +182,9 @@ export default function APP() {
             drawerIcon: () => (
               <SimpleLineIcons name="user" size={20} color="#808080" />
             ),
-            drawerLabelStyle:{
-              fontSize:17,
-              color:'black'
+            drawerLabelStyle: {
+              fontSize: 17,
+              color: 'black'
             }
           }}
           component={EmergencyContacts}
@@ -196,13 +197,21 @@ export default function APP() {
             drawerIcon: () => (
               <SimpleLineIcons name="user" size={20} color="#808080" />
             ),
-            drawerLabelStyle:{
-              fontSize:17,
-              color:'black'
+            drawerLabelStyle: {
+              fontSize: 17,
+              color: 'black'
             }
           }}
           component={ContactUs}
         />
+        <Drawer.Screen
+          name="Services"
+          component={Services}
+          options={{
+            drawerItemStyle: { height: 0 }
+          }}
+        />
+
 
       </Drawer.Navigator>
     </NavigationContainer>

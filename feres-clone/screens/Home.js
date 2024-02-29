@@ -22,7 +22,7 @@ export default function Home() {
     const navigation = useNavigation();
 
     const appServicesClicked = () => {
-        navigation.navigate('History');
+        navigation.navigate('Services');
     }
 
     return (
