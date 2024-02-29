@@ -18,13 +18,14 @@ import Home from "./screens/Home";
 import Notification from "./screens/Notification";
 import PreOrders from "./screens/PreOrders";
 import Referral from "./screens/Referral";
-
+import DrawerButton from "./components/DrawerButton";
 const Drawer = createDrawerNavigator();
 
 export default function APP() {
 
   return (
     <NavigationContainer>
+      <DrawerButton/>
       <Drawer.Navigator
         drawerContent={
           (props) => {
@@ -52,12 +53,13 @@ export default function APP() {
 
                 </View>
                 <DrawerItemList {...props} />
+                <DrawerButton {...props} />
               </SafeAreaView>
             )
           }
         }
         screenOptions={{
-          headerShown:true,
+          headerShown:false,
           drawerStyle: {
             backgroundColor: '#fff',
             width: 250,
@@ -78,6 +80,7 @@ export default function APP() {
           
         }}
       >
+        
         <Drawer.Screen
         
           name="Home"
