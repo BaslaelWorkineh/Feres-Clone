@@ -1,21 +1,20 @@
 import React from 'react';
-import { View, TouchableOpacity } from 'react-native';
+import { TouchableOpacity } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { useNavigation } from '@react-navigation/native';
+import { DrawerActions, useNavigation } from '@react-navigation/native';
 
 
-
-const DrawerButton = () => {
+const DrawerButton = (onPress) => {
     const navigation = useNavigation();
 
-    const openDrawer = () => {
-        navigation.openDrawer();
-    };
     return (
-        <View onPress={openDrawer} style={{
-            backgroundColor: 'white', width: 50, height: 50, alignItems: 'center', justifyContent: 'center',
-            position: 'absolute',
-            zIndex: 10,
+        <TouchableOpacity  onPress={()=>navigation.dispatch(DrawerActions.toggleDrawer())}
+         style={{
+            backgroundColor: 'white',
+            width: 50, 
+            height: 50, 
+            alignItems: 'center', 
+            justifyContent: 'center',
             borderRadius: 50,
             marginTop: 25,
             marginLeft: 20,
@@ -25,9 +24,9 @@ const DrawerButton = () => {
             shadowRadius: 3.84,
             elevation: 5,
         }}>
-            <MaterialCommunityIcons name='menu' size={30} color="black" style={{}} />
-        </View>
-    )
+            <MaterialCommunityIcons name='menu' size={30} color="black"/>
+        </TouchableOpacity>
+    );
 }
 
-export default DrawerButton
+export default DrawerButton;

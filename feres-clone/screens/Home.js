@@ -7,6 +7,7 @@ import { SimpleLineIcons, FontAwesome, MaterialCommunityIcons } from '@expo/vect
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import appServices from '../assets/apps.jpg';
 import DrawerButton from '../components/DrawerButton';
+import { useNavigation } from '@react-navigation/native';
 
 
 export default function Home() {
@@ -18,8 +19,18 @@ export default function Home() {
         { name: 'Ring Road', children: ['Addis Ababa'] },
     ];
 
+    const navigation = useNavigation();
+
+    const appServicesClicked = () => {
+        navigation.navigate('History');
+    }
+
     return (
         <View style={{ backgroundColor: 'rgb(153, 196, 234)' }} >
+            <View style={{position:'absolute', zIndex:9999}}>
+                <DrawerButton/>
+            </View>
+            
             <View style={{ height: vh + 50 }}>
                 <MapView
                     style={tw`flex-1`}
@@ -52,8 +63,8 @@ export default function Home() {
 
                         </View>
                     </TouchableOpacity>
-                    <TouchableOpacity style={{ paddingTop: 15, paddingLeft: 10 }}>
-                        <Image source={appServices} style={{ height: 70, width: 70, borderRadius: 10, }} />
+                    <TouchableOpacity style={{ paddingTop: 15, paddingLeft: 10 }} onPress={appServicesClicked}>
+                        <Image source={appServices} style={{ height: 70, width: 70, borderRadius: 10, }}  />
                     </TouchableOpacity>
 
 
