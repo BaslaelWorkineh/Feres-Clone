@@ -1,8 +1,9 @@
 import * as React from 'react';
-import { View, Text, Dimensions, TouchableOpacity, StyleSheet, TextInput, Modal, TouchableWithoutFeedback, FlatList } from 'react-native';
+import { Image,View, Text, Dimensions, TouchableOpacity, StyleSheet, TextInput, Modal, TouchableWithoutFeedback, FlatList } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { SimpleLineIcons } from '@expo/vector-icons';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import User from "../assets/user.jpg";
 
 const vh = Dimensions.get('screen').height;
 const vw = Dimensions.get('screen').width;
@@ -47,7 +48,7 @@ const Profile = () => {
       {/* Profile Information */}
       <View style={styles.profileContainer}>
         {/* Profile Picture */}
-        <View style={styles.profileImage} />
+        <Image  style={styles.profileImage} source={User}/>
         {/* Editable Profile Details */}
         <View style={styles.profileDetails}>
           <View style={styles.inputContainer}>

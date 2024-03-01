@@ -1,9 +1,10 @@
 import * as React from 'react';
-import { View, Text, Dimensions, TouchableOpacity, StyleSheet, TextInput, Modal, TouchableWithoutFeedback } from 'react-native';
+import { View, Text, Dimensions, TouchableOpacity, StyleSheet, TextInput, Modal, TouchableWithoutFeedback, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { SimpleLineIcons, FontAwesome } from '@expo/vector-icons';
 import ServicesBottomNavBar from '../components/ServicesBottomNavBar';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import User from "../assets/user.jpg";
 
 const vh = Dimensions.get('screen').height;
 const vw = Dimensions.get('screen').width;
@@ -35,7 +36,9 @@ const ContactUs = () => {
       <ContactUsHeader />
 
       <View style={styles.profileContainer}>
-        <View style={styles.profileImage} />
+       
+        <Image  style={styles.profileImage} source={User}/>
+        
         <Text style={styles.profileName}>Baslael</Text>
       </View>
 
