@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@expo/metro-runtime": "^3.1.1",
+    "@react-navigation/bottom-tabs": "^6.5.16",
     "@react-navigation/drawer": "^6.6.9",
     "@react-navigation/native": "^6.1.12",
     "@react-navigation/native-stack": "^6.9.20",

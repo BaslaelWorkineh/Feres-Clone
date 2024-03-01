@@ -19,6 +19,7 @@ import Notification from "./screens/Notification";
 import PreOrders from "./screens/PreOrders";
 import Referral from "./screens/Referral";
 import Services from "./screens/Services";
+import Profile from "./screens/Profile";
 const Drawer = createDrawerNavigator();
 
 export default function APP() {
@@ -210,6 +211,14 @@ export default function APP() {
           options={{
             drawerItemStyle: { height: 0 }
           }}
+        />
+        <Drawer.Screen
+          name="Profile"
+          component={Profile}
+          options={{
+            drawerItemStyle: { height: 0 }
+          }}
+          
         />
 
 

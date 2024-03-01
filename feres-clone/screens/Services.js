@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, SafeAreaView, Dimensions, Image } from 'react-native';
+import { View, Text, SafeAreaView, Dimensions, Image,TouchableOpacity } from 'react-native';
 import { MaterialCommunityIcons, SimpleLineIcons, FontAwesome } from '@expo/vector-icons';
 import profilePic from '../assets/apps.jpg';
 import car from '../assets/car.png';
@@ -12,6 +12,10 @@ import { ScrollView } from 'react-native-gesture-handler';
 import ImageSlider from '../components/ImageSlider';
 import StoreList from '../components/StoreList';
 import TopRatedFoodList from '../components/TopRatedFoodList';
+import ServicesBottomNavBar from '../components/ServicesBottomNavBar';
+import { useNavigation } from '@react-navigation/native';
+
+
 
 export default function Services() {
     const vw = Dimensions.get('window').width;
@@ -25,13 +29,17 @@ export default function Services() {
     ];
 
 
-
-
+    const navigation = useNavigation();
+    const handleNavigateHome = () => {
+        navigation.navigate('Home'); // Navigate to the 'Home' screen
+    };
 
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: 'white' }}>
             <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', paddingTop: 40 }}>
+            <TouchableOpacity onPress={handleNavigateHome}>
                 <SimpleLineIcons name='arrow-left' size={15} style={{ marginTop: 20, marginRight: 30 }} />
+            </TouchableOpacity>
                 <View style={{ alignItems: 'center' }}>
                     <Text>Delivery to</Text>
                     <Text>XP9G+92M, Addis Ababa</Text>
@@ -103,6 +111,11 @@ export default function Services() {
                     </View>
                 </View>
             </ScrollView>
+            <View style={{height:70,backgroundColor:'white'}}>
+                 <ServicesBottomNavBar/>
+            </View>
+
+           
 
 
         </SafeAreaView>
