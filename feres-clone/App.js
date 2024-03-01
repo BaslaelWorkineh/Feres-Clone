@@ -9,7 +9,7 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 import { NavigationContainer } from "@react-navigation/native";
 import { DrawerItemList, createDrawerNavigator } from "@react-navigation/drawer";
-import User from "./assets/icon.png";
+import User from "./assets/user.jpg";
 import ContactUs from "./screens/ContactUs";
 import EmergencyContacts from "./screens/EmergencyContacts";
 import FeresMiles from "./screens/FeresMiles";
@@ -27,6 +27,7 @@ export default function APP() {
   return (
     <NavigationContainer>
       <Drawer.Navigator
+        initialRouteName="Home"
         drawerContent={
           (props) => {
             return (
@@ -39,7 +40,8 @@ export default function APP() {
                     alignItems: 'center',
                     borderBottomColor: "#f4f4f4",
                     borderBottomWidth: 1,
-                    backgroundColor: 'white',
+                    backgroundColor: 'rgb(0, 166, 30)',
+                    position: 'absolute'
                   }}
                 >
                   <Image
@@ -49,10 +51,13 @@ export default function APP() {
                       width: 100,
                       borderRadius: 65
                     }} />
-                  <Text style={{ color: 'black', fontSize: 20, marginVertical: 6 }} >Baslael Workineh</Text>
+                  <Text style={{ color: 'white', fontSize: 20, marginVertical: 6 }} >Baslael Workineh</Text>
 
                 </View>
-                <DrawerItemList {...props} />
+                <View style={{ paddingTop: 250 }}>
+                  <DrawerItemList {...props} />
+                </View>
+
               </SafeAreaView>
             )
           }
@@ -80,29 +85,14 @@ export default function APP() {
         }}
       >
 
-        <Drawer.Screen
 
-          name="Home"
-          options={{
-            drawerLabel: "Home",
-            title: "Home",
-            drawerIcon: () => (
-              <SimpleLineIcons name="home" size={20} color="#808080" />
-            ),
-            drawerLabelStyle: {
-              fontSize: 17,
-              color: 'black'
-            }
-          }}
-          component={Home}
-        />
         <Drawer.Screen
           name="PreOrders"
           options={{
             drawerLabel: "Pre-Orders",
             title: "PreOrders",
             drawerIcon: () => (
-              <SimpleLineIcons name="user" size={20} color="#808080" />
+              <MaterialCommunityIcons name="newspaper" size={20} color="#808080" />
             ),
             drawerLabelStyle: {
               fontSize: 17,
@@ -117,7 +107,7 @@ export default function APP() {
             drawerLabel: "Feres Miles",
             title: "FeresMiles",
             drawerIcon: () => (
-              <SimpleLineIcons name="user" size={20} color="#808080" />
+              <MaterialCommunityIcons name="horse" size={20} color="#808080" />
             ),
             drawerLabelStyle: {
               fontSize: 17,
@@ -132,7 +122,7 @@ export default function APP() {
             drawerLabel: "History",
             title: "History",
             drawerIcon: () => (
-              <SimpleLineIcons name="user" size={20} color="#808080" />
+              <FontAwesome name="history" size={20} color="#808080" />
             ),
             drawerLabelStyle: {
               fontSize: 17,
@@ -147,7 +137,7 @@ export default function APP() {
             drawerLabel: "Referral",
             title: "Referral",
             drawerIcon: () => (
-              <SimpleLineIcons name="user" size={20} color="#808080" />
+              <MaterialCommunityIcons name="ticket" size={20} color="#808080" />
             ),
             drawerLabelStyle: {
               fontSize: 17,
@@ -181,7 +171,7 @@ export default function APP() {
             ),
             title: "EmergencyContacts",
             drawerIcon: () => (
-              <SimpleLineIcons name="user" size={20} color="#808080" />
+              <MaterialCommunityIcons name="contacts" size={20} color="#808080" />
             ),
             drawerLabelStyle: {
               fontSize: 17,
@@ -218,9 +208,16 @@ export default function APP() {
           options={{
             drawerItemStyle: { height: 0 }
           }}
-          
-        />
 
+        />
+        <Drawer.Screen
+          name="Home"
+          component={Home}
+          options={{
+            drawerItemStyle: { height: 0 }
+          }}
+
+        />
 
       </Drawer.Navigator>
     </NavigationContainer>
