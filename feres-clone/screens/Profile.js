@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Image,View, Text, Dimensions, TouchableOpacity, StyleSheet, TextInput, Modal, TouchableWithoutFeedback, FlatList } from 'react-native';
+import { Image, View, Text, Dimensions, TouchableOpacity, StyleSheet, TextInput, Modal, TouchableWithoutFeedback, FlatList } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { SimpleLineIcons } from '@expo/vector-icons';
 import { SafeAreaView } from 'react-native-safe-area-context';
