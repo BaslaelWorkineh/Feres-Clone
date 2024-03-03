@@ -29,7 +29,7 @@ Feres is a widely-used application in Ethiopia, offering a seamless experience f
   </tr>
   <tr>
     <td><img src="images/screenshot4.jpg" alt="Screenshot 4" width="300"></td>
-    <td><img src="images/screenshot5.jpg" alt="Screenshot 5" width="300"></td>
+    <td><img src="images/screenshot7.jpg" alt="Screenshot 7" width="300"></td>
     <td><img src="images/screenshot6.jpg" alt="Screenshot 6" width="300"></td>
     <td></td> <!-- This is an empty cell to maintain the layout -->
   </tr>
