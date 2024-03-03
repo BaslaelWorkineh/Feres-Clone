@@ -21,11 +21,20 @@ Feres is a widely-used application in Ethiopia, offering a seamless experience f
 
 ## Screenshots
 
-![Screenshot 1](images/screenshot1.jpg)
-![Screenshot 2](images/screenshot2.jpg)
-![Screenshot 3](images/screenshot3.jpg)
-![Screenshot 4](images/screenshot4.jpg)
-![Screenshot 5](images/screenshot5.jpg)
+<table>
+  <tr>
+    <td><img src="images/screenshot1.jpg" alt="Screenshot 1" width="300"></td>
+    <td><img src="images/screenshot2.jpg" alt="Screenshot 2" width="300"></td>
+    <td><img src="images/screenshot3.jpg" alt="Screenshot 3" width="300"></td>
+  </tr>
+  <tr>
+    <td><img src="images/screenshot4.jpg" alt="Screenshot 4" width="300"></td>
+    <td><img src="images/screenshot5.jpg" alt="Screenshot 5" width="300"></td>
+    <td><img src="images/screenshot6.jpg" alt="Screenshot 6" width="300"></td>
+    <td></td> <!-- This is an empty cell to maintain the layout -->
+  </tr>
+</table>
+
 
 ## Getting Started
 
