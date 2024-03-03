@@ -9,7 +9,11 @@ import DrawerButton from '../components/DrawerButton';
 import HomeBottomLocation from '../components/HomeBottomLocation';
 import { BottomSheetModal, BottomSheetModalProvider } from '@gorhom/bottom-sheet'
 import { useRef } from 'react';
-import lada from '../assets/economy.png'
+import Economy from '../assets/car5.png'
+import Classic from '../assets/car2.png'
+import Minivan from '../assets/car3.png'
+import Minibus from '../assets/car4.png'
+import Lada from '../assets/car1.png'
 import { SimpleLineIcons, FontAwesome, MaterialCommunityIcons } from '@expo/vector-icons';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
@@ -28,11 +32,11 @@ export default function Home() {
     }
 
     const cars = [
-        { key: 1, image: lada, title: 'Economy', time: '12.43 dropoff', price: 'ETB 299.0' },
-        { key: 2, image: lada, title: 'Classic', time: '12.43', price: 'ETB 299.0' },
-        { key: 3, image: lada, title: 'Minivan', time: '12.43', price: 'ETB 299.0' },
-        { key: 4, image: lada, title: 'Minibus', time: '12.43', price: 'ETB 299.0' },
-        { key: 5, image: lada, title: 'Lada', time: '12.43', price: 'ETB 299.0' },
+        { key: 1, image: Classic, title: 'Economy', time: '12.43 dropoff', price: 'ETB 299.0' },
+        { key: 2, image: Minivan, title: 'Classic', time: '12.43', price: 'ETB 299.0' },
+        { key: 3, image: Economy, title: 'Minivan', time: '12.43', price: 'ETB 299.0' },
+        { key: 4, image: Minibus, title: 'Minibus', time: '12.43', price: 'ETB 299.0' },
+        { key: 5, image: Lada, title: 'Lada', time: '12.43', price: 'ETB 299.0' },
 
     ]
 
@@ -78,7 +82,7 @@ export default function Home() {
 
                     {cars.map((items) => (
                         <TouchableOpacity key={items.key} onPress={() => changeButton((items.title))} activeOpacity={0.4} style={{ flexDirection: 'row', marginTop: 10, paddingTop: 20, paddingBottom: 10, borderBottomWidth: 1, borderBottomColor: 'lightgray', justifyContent: 'space-evenly' }}>
-                            <Image source={items.image} style={{ width: 100, height: 35, marginLeft: 0, marginRight: 10, marginTop: 10 }} />
+                            <Image source={items.image} style={{ width: 77, height: 35, marginRight: 10, marginTop: 0 }} />
                             <View style={{ width: 90 }}>
                                 <Text style={{ fontSize: 20, fontWeight: 900, color: 'rgba(72, 72, 72, 0.97)' }}>{items.title}</Text>
                                 <Text style={{ color: 'rgba(72, 72, 72, 0.97)' }}>{items.time}</Text>
