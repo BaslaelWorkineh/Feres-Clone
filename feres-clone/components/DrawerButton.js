@@ -8,7 +8,7 @@ const DrawerButton = (onPress) => {
     const navigation = useNavigation();
 
     return (
-        <TouchableOpacity  onPress={()=>navigation.dispatch(DrawerActions.toggleDrawer())}
+        <TouchableOpacity activeOpacity={0.6} onPress={()=>navigation.dispatch(DrawerActions.toggleDrawer())}
          style={{
             backgroundColor: 'white',
             width: 50, 
