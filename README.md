@@ -21,11 +21,11 @@ Feres is a widely-used application in Ethiopia, offering a seamless experience f
 
 ## Screenshots
 
-![Screenshot 1](images/screenshot1.png)
-![Screenshot 2](images/screenshot2.png)
-![Screenshot 3](images/screenshot3.png)
-![Screenshot 4](images/screenshot4.png)
-![Screenshot 5](images/screenshot5.png)
+![Screenshot 1](images/screenshot1.jpg)
+![Screenshot 2](images/screenshot2.jpg)
+![Screenshot 3](images/screenshot3.jpg)
+![Screenshot 4](images/screenshot4.jpg)
+![Screenshot 5](images/screenshot5.jpg)
 
 ## Getting Started
 
