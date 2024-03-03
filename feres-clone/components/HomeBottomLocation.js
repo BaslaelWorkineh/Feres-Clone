@@ -1,5 +1,5 @@
 import { View, Text,Dimensions,TouchableOpacity, Image } from 'react-native'
-import React from 'react'
+import React, { useRef } from 'react'
 import { useNavigation } from '@react-navigation/native';
 import vitz from '../assets/vitz.png'
 import lada from '../assets/lada.png'
@@ -9,7 +9,8 @@ import van from '../assets/van.png'
 import tw from 'tailwind-react-native-classnames'
 import appServices from '../assets/apps.jpg';
 import { SimpleLineIcons, FontAwesome, MaterialCommunityIcons } from '@expo/vector-icons';
-const HomeBottomLocation = () => {
+import { Home } from '../screens/Home';
+const HomeBottomLocation = ({handlePresentModal}) => {
     const vw = Dimensions.get('window').width;
     const vh = Dimensions.get('window').height;
     const locations = [
@@ -23,6 +24,8 @@ const HomeBottomLocation = () => {
     const appServicesClicked = () => {
         navigation.navigate('Services');
     }
+
+    
 
   return (
     <View>
@@ -54,7 +57,7 @@ const HomeBottomLocation = () => {
                 <View style={tw` pl-5`}>
 
                     {locations.map((location, index) => (
-                        <TouchableOpacity>
+                        <TouchableOpacity title="Present Modal" onPress={handlePresentModal}>
                             <View key={index} style={{}}>
                                 <View style={tw`flex-row items-center`}>
                                     <SimpleLineIcons name="location-pin" size={10} color="red" style={tw`mr-2`} />
@@ -72,6 +75,7 @@ const HomeBottomLocation = () => {
 
                     ))}
                 </View>
+                
 
     </View>
   )
